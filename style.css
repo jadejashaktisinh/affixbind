@@ -22,19 +22,27 @@ body {
 header {
     background-image: url(./Assets/hero-2.jpg);
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100vw 100vh;
+    background-size: 100vw;
 
 }
-
-
-
+.mobile-menu-btn{
+    color: white;
+    background-color: transparent;
+    border: none;
+    font-size: 3vw;
+}
 .nav-logo-con {
-    font-size: 2rem;
+    font-size: 2.7vw;
+    display: flex;
+    align-items: center;
+    gap: 20px;
     font-weight: 500;
     font-family: 'Times New Roman', Times, serif
 }
-
+.nav-logo{
+    width: 3.5vw;
+    height: 3.5vw;
+}
 .nav-logo-con span a {
 
     color: white;
@@ -42,20 +50,13 @@ header {
 
 }
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-
-}
-
 .navbar li {
     list-style: none;
-    font-size: 1.4rem;
+    font-size: 1.7vw;
 }
 
 .navbar li a {
-    color: rgb(131, 130, 130);
+    color: rgb(255, 255, 255);
     text-decoration: none;
 
 }
@@ -96,14 +97,15 @@ header {
 }
 
 main {
-    background-color: black;
+    background-color: #13161f;
+    box-shadow: 0px -45px 50px #13161f;
 }
 
 .search-img-gallery {
     position: relative;
     display: grid;
-    grid-template-columns: 0.5fr 0.7fr;
-    place-items: center;
+    grid-template-columns: 0.5fr 0.5fr;
+    align-items: center;
 
 }
 
@@ -144,6 +146,7 @@ main {
     left: 10rem;
     width: 17rem;
     height: 5rem;
+    border: none;
     background-color: white;
     color: black;
     display: flex;
@@ -188,10 +191,10 @@ main {
     border-radius: 20px;
     border: none;
     margin-top: 2rem;
-    margin-bottom: 9rem;
+    margin-bottom: 9vw;
 }
 #icon{
-    background-color: #212529;
+    background-color: #13161f;
     color: #f8f9fa;
     padding: 5vw;
 }
@@ -249,7 +252,7 @@ main {
   transform: translate(-50%, -50%);
 }
 #footer-form{
-    background-color:#212529;
+    background-color:#13161f;
     color: #f8f9fa;
     border-radius: 2vw;
     margin: 2vw;
@@ -262,7 +265,8 @@ main {
     font-weight: 700;
 }
 .input{
-    margin-left: 7vw;
+    margin-left: 3.5vw;
+    margin-right:3.5vw ;
 }
 .md-3{
     text-align: left;
@@ -422,7 +426,7 @@ main {
     }
     
     .search-img2 {
-        width: 10rem;
+        width: 9rem;
         height: 6rem;
     
     }
@@ -435,15 +439,23 @@ main {
     }
     
     .search-img4 {
-        width: 13rem;
-        height: 14rem;
+        width: 10rem;
+        height: 11rem;
   
     }
     .seacrh-bar {
-        top: 12rem;
+        top: 9rem;
+        left: 4rem;
         width: 15rem;
         height: 4rem;
         font-size: 1.2rem;
     }
+    .search-section-text-heading {
+        font-size: 8vw;
+        text-align: center;
+    }
     
+    .search-section-text-para {
+        font-size: 6vw;
+    }
 }   
