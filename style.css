@@ -303,9 +303,10 @@ main {
     font-weight: 700;
 }
 
-/* .input {
-    
-} */
+.input {
+    margin-left: 3.5vw;
+    margin-right: 3.5vw;
+}
 
 .md-3 {
     text-align: left;
@@ -534,7 +535,7 @@ main {
     }
 
     .input {
-        margin-left: -1vw;
+        margin-left: 2vw;
         width: 90vw;
     }
 
@@ -626,7 +627,6 @@ main {
         height: 11rem;
 
     }
-
     .seacrh-bar {
         top: 9rem;
         left: 4rem;
@@ -659,7 +659,7 @@ main {
         font-size: 8.5vw;
         color: #fb5a8c;
         padding-bottom: 0.6vw;
-        margin-top: -14vw;
+        margin-top: -7vw;
         padding-top: 10vw;
     }
 }
