@@ -37,8 +37,8 @@
                     <li><a href="#">Today</a></li>
                     <li><a href="#">Explore</a></li>
                     <li><a href="#">About</a></li>
-                    <li><button>Log in</button></li>
-                    <li><button>Sign up</button></li>
+                    <li><button onclick="loginbtntop()"><a href="#footer-login">Log in</a></button></li>
+                    <li><button onclick="signuptop()"><a href="#footer-form">Sign up</a></button></li>
                 </ul>
                 
 
@@ -46,8 +46,8 @@
                     <li><a href="#">Today</a></li>
                     <li><a href="#">Explore</a></li>
                     <li><a href="#">About</a></li>
-                    <li><button>Log in</button></li>
-                    <li><button>Sign up</button></li>
+                    <li><button onclick="loginbtntop()"><a href="#footer-login">Log in</a></button></li>
+                    <li><button onclick="signuptop()"><a href="#footer-form">Sign up</a></button></li>
                 </ul>
 
             </div>
@@ -214,7 +214,42 @@
                     <p id="footer-last-text">
                         By Continuing you agree to Pinterest's<br><a>Terms of Service </a>and acknowledge you've
                         read<br>our <a>Privacy Policy. Notice at collection</a>
-                    <p id="footer-last-text-login">Already a Member? <b><a>Login in</a></b></p>
+                    <p id="footer-last-text-login">Already a Member? <b><a id="login" onclick="loginbtntop()">Login in</a></b></p>
+                    </p>
+                </div>
+                <div id="footer-login" class="mx-auto align-items-center" style="display: none;">
+                    <img src="Assets/output-onlinepngtools-1.png" height="50vw" width="50vw"
+                    style="margin-top: 2vw;margin-bottom: 1vw;"><br>
+                    <b id="footer-main-head">Welcome To AffixBind</b><br>
+                    <a>Find new ideas to try</a><br><br>
+                    <form>
+                        <div class="md-3 input">
+                            <label for="exampleInputEmail1" class="form-label">&nbsp;Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="Email">
+                        </div>
+                        <div class="md-3 input">
+                            <label for="exampleInputPassword1" class="form-label">&nbsp;Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                placeholder="Enter Password">
+                        </div>
+                        <div style="margin-bottom: 0.8vw;margin-top: 1vw;">
+                            <button type="submit" class="btn btn-danger">Continue</button>
+                        </div>
+                        <b>OR</b>
+                        <div style="margin-top: -0vw;">
+                            <button type="submit" class="btn btn-primary"><i
+                                    class="fab fa-facebook"></i>&nbsp;&nbsp;Continue With Facebook</button>
+                        </div>
+                        <div>
+                            <button type="submit" class="btn" id="google-btn"><i class="fab fa-google"
+                                    style="margin-left: -1vw;margin-right: 1.3vw;"></i>Continue with Google</button>
+                        </div>
+                    </form>
+                    <p id="footer-last-text">
+                        By Continuing you agree to Pinterest's<br><a>Terms of Service </a>and acknowledge you've
+                        read<br>our <a>Privacy Policy. Notice at collection</a>
+                    <p id="footer-last-text-login">No account? <b><a id="signup" onclick="signuptop()">Sign up</a></b></p>
                     </p>
                 </div>
             </div>
@@ -225,10 +260,10 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/c42195777b.js" crossorigin="anonymous"></script>
-
-
-
-
+    <script src="script.js">
+        
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </body>
 
 </html>
