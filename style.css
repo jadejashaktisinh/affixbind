@@ -303,10 +303,9 @@ main {
     font-weight: 700;
 }
 
-.input {
-    margin-left: 3.5vw;
-    margin-right: 3.5vw;
-}
+/* .input {
+    
+} */
 
 .md-3 {
     text-align: left;
@@ -535,7 +534,7 @@ main {
     }
 
     .input {
-        margin-left: 2vw;
+        margin-left: -1vw;
         width: 90vw;
     }
 
@@ -660,7 +659,7 @@ main {
         font-size: 8.5vw;
         color: #fb5a8c;
         padding-bottom: 0.6vw;
-        margin-top: -7vw;
+        margin-top: -14vw;
         padding-top: 10vw;
     }
 }
