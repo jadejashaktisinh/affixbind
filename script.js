@@ -9,4 +9,3 @@ let loginpg = document.getElementById("footer-login");
             signuppg.style.display="block";
             loginpg.style.display="none";
         }
-
