@@ -34,7 +34,6 @@ googlesign.addEventListener("click", function () {
             window.location.href = "Dashboard/index.html";
         }).catch((error) => {
             const errorMessage = error.message;
-            alert(errorMessage);
         });
 })
 googleLogin.addEventListener("click", function () {
@@ -45,7 +44,6 @@ googleLogin.addEventListener("click", function () {
             window.location.href = "Dashboard/index.html";
         }).catch((error) => {
             const errorMessage = error.message;
-            alert(errorMessage);
         });
 })
 
@@ -59,7 +57,6 @@ facebooksign.addEventListener("click", function (event) {
   })
   .catch((error) => {
     const errorMessage = error.message;
-    alert(errorMessage);
   });
 
 })
@@ -73,7 +70,6 @@ facebooklogin.addEventListener("click", function (event) {
   })
   .catch((error) => {
     const errorMessage = error.message;
-    alert(errorMessage);
   });
 
 })
