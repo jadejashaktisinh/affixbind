@@ -19,7 +19,6 @@ const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
 const faceprovider = new FacebookAuthProvider();
 
-
 const googlesign = document.getElementById("signup-google-btn");
 const googleLogin = document.getElementById("login-google-btn");
 
@@ -71,50 +70,4 @@ facebooklogin.addEventListener("click", function (event) {
   .catch((error) => {
     const errorMessage = error.message;
   });
-
 })
-
-
-
-//   window.fbAsyncInit = function() {
-//     FB.init({
-//       appId      : '1231986291462743',
-//       cookie     : true,
-//       xfbml      : true,
-//       version    : 'v21.0'
-//     });
-      
-//     FB.AppEvents.logPageView();   
-      
-//   };
-
-//   (function(d, s, id){
-//      var js, fjs = d.getElementsByTagName(s)[0];
-//      if (d.getElementById(id)) {return;}
-//      js = d.createElement(s); js.id = id;
-//      js.src = "https://connect.facebook.net/en_US/sdk.js";
-//      fjs.parentNode.insertBefore(js, fjs);
-//    }(document, 'script', 'facebook-jssdk'));
-
-   
-// FB.getLoginStatus(function(response) {
-//     statusChangeCallback(response);
-// });
-
-
-// {
-//     status: 'connected',
-//     authResponse: {
-//         accessToken: '...',
-//         expiresIn:'...',
-//         signedRequest:'...',
-//         userID:'...'
-//     }
-// }
-
-
-// function checkLoginState() {
-//     FB.getLoginStatus(function(response) {
-//       statusChangeCallback(response);
-//     });
-//   }
