@@ -1,18 +1,18 @@
 let loginpg = document.getElementById("footer-login");
-        let signuppg = document.getElementById("footer-form-img");
-        function loginbtntop() {
-            loginpg.style.display = "block";
-            loginpg.style.textAlign = "center";
-            signuppg.style.display = "none";
-        }
-        function signuptop(){
-            signuppg.style.display="block";
-            loginpg.style.display="none";
-        }
+let signuppg = document.getElementById("footer-form-img");
+function loginbtntop() {
+  loginpg.style.display = "block";
+  loginpg.style.textAlign = "center";
+  signuppg.style.display = "none";
+}
+function signuptop() {
+  signuppg.style.display = "block";
+  loginpg.style.display = "none";
+}
 
 import { initializeApp } from "firebase/app";
 import { getDatabase, ref, set } from "firebase/firebase-database.js";
-import { getAuth , GoogleAuthProvider, signInWithPopup } from "https://firebase.google.com/docs/web/setup#available-libraries/firebase-auth.js";
+import { getAuth, GoogleAuthProvider, signInWithPopup } from "https://firebase.google.com/docs/web/setup#available-libraries/firebase-auth.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyCtaorjIFiGnJc5LbETLB1wi2QLgKVsRgU",
@@ -30,37 +30,37 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 const auth = getAuth(app);
-      
+
 auth.languageCode = 'en';
 const provider = new GoogleAuthProvider();
 
 const googleLogin = document.getElementById("google-btn");
-googleLogin.addEventListener("click",function(){
-    signInWithPopup(auth, provider)
-  .then((result) => {
-    
-    const credential = GoogleAuthProvider.credentialFromResult(result);
-    const user = result.user;
-    console.log("user",user);
-    window.location.href="./ChatMat.html";
+googleLogin.addEventListener("click", function () {
+  signInWithPopup(auth, provider)
+    .then((result) => {
+
+      const credential = GoogleAuthProvider.credentialFromResult(result);
+      const user = result.user;
+      console.log("user", user);
+      window.location.href = "./ChatMat.html";
 
 
-  }).catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-  });
+    }).catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+    });
 });
 
 // email and password
 let sinbtn = document.getElementById("signupcon");
 sinbtn.addEventListener("click", function (e) {
-    e.preventDefault();
-    let obj = {
-        "email": document.getElementById("signupemail").value
-    }
-    
-    myarray.push(obj);
-    console.log(myarray);
-    set(ref(db, 'chats/'),myarray); 
+  e.preventDefault();
+  let obj = {
+    "email": document.getElementById("signupemail").value
+  }
+
+  myarray.push(obj);
+  console.log(myarray);
+  set(ref(db, 'chats/'), myarray);
 }
 )
