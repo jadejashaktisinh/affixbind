@@ -328,11 +328,6 @@ main {
     border-radius: 2vw;
 }
 
-#google-btn {
-    border: 1px solid black;
-    border-radius: 2vw;
-    background-color: white;
-}
 
 #footer-last-text {
     margin-top: 2vw;
@@ -561,11 +556,6 @@ main {
         border-radius: 2vw;
     }
 
-    #google-btn {
-        border: 1px solid black;
-        border-radius: 2vw;
-        background-color: white;
-    }
 
     #footer-last-text {
         margin-top: 4vw;
