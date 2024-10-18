@@ -1,17 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
 import { getAuth, GoogleAuthProvider, signInWithPopup,FacebookAuthProvider } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js";
-
-const firebaseConfig = {
-    apiKey: "AIzaSyCtaorjIFiGnJc5LbETLB1wi2QLgKVsRgU",
-    authDomain: "affibind.firebaseapp.com",
-    databaseURL: "https://affibind-default-rtdb.firebaseio.com",
-    projectId: "affibind",
-    storageBucket: "affibind.appspot.com",
-    messagingSenderId: "1029163569904",
-    appId: "1:1029163569904:web:d6a17cbb2f1481f9132835",
-    measurementId: "G-N0DZF4CFQX"
-};
+import { firebaseConfig } from "./env.js";
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
@@ -25,7 +15,9 @@ const googleLogin = document.getElementById("login-google-btn");
 const facebooksign=document.getElementById("facebook-sign");
 const facebooklogin=document.getElementById("facebook-login");
 
-googlesign.addEventListener("click", function () {
+googlesign.addEventListener("click", function (event) {
+  event.preventDefault();
+
     signInWithPopup(auth, provider)
         .then((result) => {
             const credential = GoogleAuthProvider.credentialFromResult(result);
@@ -35,7 +27,9 @@ googlesign.addEventListener("click", function () {
             const errorMessage = error.message;
         });
 })
-googleLogin.addEventListener("click", function () {
+googleLogin.addEventListener("click", function (event) {
+  event.preventDefault();
+
     signInWithPopup(auth, provider)
         .then((result) => {
             const credential = GoogleAuthProvider.credentialFromResult(result);

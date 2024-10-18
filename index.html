@@ -190,15 +190,15 @@
                             <input id="startDate" class="form-control" type="date">
                         </div>
                         <div style="margin-bottom: 0.8vw;margin-top: 1vw;">
-                            <button type="submit" class="btn btn-danger">Continue</button>
+                            <button type="button" class="btn btn-danger" id="signup-btn">Continue</button>
                         </div>
                         <b>OR</b>
                         <div style="margin-top: -0vw;">
-                            <button type="submit" class="btn btn-primary" id="facebook-sign"><i
+                            <button type="button" class="btn btn-primary" id="facebook-sign"><i
                                     class="fab fa-facebook"></i>&nbsp;&nbsp;Continue With Facebook</button>
                         </div>
                         <div>
-                            <button class="btn" id="signup-google-btn"
+                            <button class="btn" id="signup-google-btn" type="button"
                                 style="border: 1px solid black;border-radius: 2vw;background-color: white;">
                                 <i class="fab fa-google" style="margin-left: -1vw;margin-right: 1.3vw;"></i>
                                 Continue with Google
@@ -220,24 +220,24 @@
                     <form>
                         <div class="md-3 input">
                             <label for="exampleInputEmail1" class="form-label">&nbsp;Email address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1"
+                            <input type="email" class="form-control" id="exampleInputEmail2"
                                 aria-describedby="emailHelp" placeholder="Email">
                         </div>
                         <div class="md-3 input">
                             <label for="exampleInputPassword1" class="form-label">&nbsp;Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1"
+                            <input type="password" class="form-control" id="exampleInputPassword2"
                                 placeholder="Enter Password">
                         </div>
                         <div style="margin-bottom: 0.8vw;margin-top: 1vw;">
-                            <button type="submit" class="btn btn-danger">Continue</button>
+                            <button type="button" class="btn btn-danger" id="login-btn">Continue</button>
                         </div>
                         <b>OR</b>
                         <div style="margin-top: -0vw;">
-                            <button class="btn btn-primary" id="facebook-login"><i class="fab fa-facebook"></i>&nbsp;&nbsp;Continue With
+                            <button class="btn btn-primary" id="facebook-login" type="button"><i class="fab fa-facebook"></i>&nbsp;&nbsp;Continue With
                                 Facebook</button>
                         </div>
                         <div>
-                            <button class="btn" id="login-google-btn"
+                            <button class="btn" id="login-google-btn" type="button"
                                 style="border: 1px solid black;border-radius: 2vw;background-color: white;">
                                 <i class="fab fa-google" style="margin-left: -1vw;margin-right: 1.3vw;"></i>
                                 Continue with Google
@@ -259,12 +259,9 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/c42195777b.js" crossorigin="anonymous"></script>
-    <script src="script.js">
-
-    </script>
-    <script type="module" src="firebase.js">
-
-    </script>
+    <script src="script.js"> </script>
+    <script type="module" src="firebase.js"> </script>
+    <script type="module" src="auth.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </body>
 
