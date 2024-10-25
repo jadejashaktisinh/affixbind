@@ -1,3 +1,213 @@
-body{
-    background-color: red;
+* {
+    margin: 0px;
+    padding: 0px;
+
+}
+
+.container-fluid {
+
+    margin: 0px !important;
+    padding: 0px !important;
+
+}
+
+.row {
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+header {
+    background-color: #13161f;
+
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+
+}
+
+.nav li {
+    list-style: none;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+
+.nav li a {
+
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+}
+.nav li:nth-child(1) a{
+    font-size: 2rem;
+}
+.nav li:nth-child(5) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.nav li:nth-child(5) i{
+    color: rgb(56, 56, 56);
+    font-size: 1.5rem;
+    position: absolute;
+    left: 1vw;
+}
+.search-bar{
+        border-radius: 20px;
+        border: none;
+        min-height: 2rem;
+        padding: 20rem;
+}
+.profile{
+    background-color: aliceblue;
+    max-width: 2.5rem;
+    min-height: 2.5rem;
+    border-radius: 50%;
+
+}
+.profile img{
+    object-fit: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+main{
+    background-color: #13161f;
+
+}
+.profile-pic{
+    background-color: azure;
+    max-width: 20rem;
+    min-height: 20rem;
+    border-radius: 50%;
+    margin-top: 5rem !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profile-pic img{
+    object-fit: cover;
+    border-radius: 50%;
+}
+.profile-btn{
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 20px;
+    background-color: azure;
+}
+.profile-btn a{
+    text-decoration: none;
+    color: #13161f;
+    font-weight: 600;
+
+}
+.affixes{
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.7rem;
+    color: white;
+}
+.edit-head{
+    color: white;
+    font-size: 3rem;
+    margin-top: 5rem !important;
+}
+.edit-profile{
+    max-width: 4rem !important;
+    min-height: 4rem;
+    background-color: azure;
+    border-radius: 50%;
+}
+.edit-profile img {
+    object-fit:cover ;
+    border-radius: 50%;
+}
+.inputfile{
+    position: fixed;
+    right: 100%;
+    bottom: 100%;
+}
+.change-btn{
+    border-radius: 20px;
+    font-size: 1.5rem;
+    margin-left: 1.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    text-align: center;
+}
+.username-area{
+    flex-direction: column;
+    
+}
+.username-area label{
+    font-size: 1.5rem;
+    color: white;
+}
+.username-area input{
+    border-radius: 20px;
+    border: none;
+    min-height: 2rem;
+}
+.save-btn{
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 20px;
+    margin-bottom: 2rem;
+}
+.create-head p{
+    color: white;
+    font-size: 2rem;
+    margin-top: 2rem;
+}
+.img-lable{
+    margin-top: 3rem !important;
+    min-height: 25rem;
+    background-color: rgb(53, 52, 52);
+    font-size: 2rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 20px;
+    align-items: center;
+}
+#affixImg{
+    position: fixed;
+    right: 100%;
+    bottom: 100%;
+}
+.input-form{
+        display: flex;
+        flex-direction: column;
+}
+.input-form label{
+    color: white;
+    font-size: 1.4rem;
+
+}
+.input-form input{
+    height: 2rem;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 4rem;
+    padding-left: 10px;
+}
+#affixDesc{
+    height: 6rem;
+    border-radius: 10px;
+    margin-bottom: 4rem;
+    padding-left: 10px;
+
+}
+.publish-btn{
+    font-size: 1.6rem;
+    border: none;
+    background-color: rgb(53, 52, 52);
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
 }

@@ -35,6 +35,26 @@ header {
     font-size: 3vw;
 }
 
+.mobile-menu-nav li{
+    list-style: none;
+    margin: 1vw 7vw;
+    font-size: 3vw;
+}
+.mobile-menu-nav li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.mobile-menu-nav li button   {
+    background-color: rgb(255, 16, 96);
+    border-radius: 10px;
+    border: none;
+    color: rgb(255, 252, 252);
+    padding: 4px 12px;
+}
+.dropdown-menu{
+    text-align: right !important;
+}
+
 .nav-logo-con {
     font-size: 2.7vw;
     display: flex;
@@ -56,18 +76,18 @@ header {
 
 }
 
-.navbar li {
+.nav-bar li {
     list-style: none;
     font-size: 1.7vw;
 }
 
-.navbar li a {
+.nav-bar li a {
     color: rgb(255, 255, 255);
     text-decoration: none;
 
 }
 
-.navbar li button {
+.nav-bar li button {
     background-color: rgb(255, 16, 96);
     border-radius: 10px;
     border: none;
@@ -111,7 +131,7 @@ main {
 .search-img-gallery {
     position: relative;
     display: grid;
-    grid-template-columns: 0.5fr 0.5fr;
+    grid-template-columns: 0.5fr auto;
     align-items: center;
 
 }
@@ -149,15 +169,15 @@ main {
 
 .seacrh-bar {
     position: absolute;
-    top: 15rem;
-    left: 10rem;
-    width: 17rem;
-    height: 5rem;
+    top: 20vw;
+    left: 12rem;
+    width: 22rem;
+    height: 6rem;
     border: none;
     background-color: white;
     color: black;
     display: flex;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     border-radius: 20px;
     align-items: center;
     justify-content: center;
@@ -379,6 +399,10 @@ main {
 }
 
 @media screen and (max-width:992px) {
+    .seacrh-bar {
+        width: 20rem;
+        height: 5rem;
+    }
     #icon {
         background-color: #13161f;
         color: #f8f9fa;
@@ -435,7 +459,18 @@ main {
 }
 @media screen and (max-width:768px) {
 
-
+    .mobile-menu-btn {
+        font-size: 4.5vw;
+    }
+    
+    .nav-logo-con {
+        font-size: 5.5vw;
+    }
+    
+    .nav-logo {
+        width: 5vw;
+        height: 5vw;
+    }
     .search-img1 {
         width: 10rem;
         height: 9rem;
@@ -501,6 +536,27 @@ main {
 }
 
 @media only screen and (max-width: 576px) {
+
+    .mobile-menu-btn {
+        font-size: 4vw;
+    }
+    
+    .nav-logo-con {
+        font-size: 5vw;
+    }
+    
+    .nav-logo {
+        width: 5vw;
+        height: 5vw;
+    }
+    .header-text-main {
+        font-size: 6vw;
+    }
+    .header-text-para {
+        margin-bottom: 5vw;
+        font-size: 2.1vw;
+        max-width: 70%;
+    }
     #footer-firstside-text {
         display: none;
     }

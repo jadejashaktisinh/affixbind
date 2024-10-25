@@ -26,7 +26,7 @@
                 <li class="col-1">
                     <a href="./profile.html">
                         <div class="profile">
-                             <img src="../Assets/logo.png" alt=""  class="profile-img" width="100%" height="100%">
+                             <img src="../Assets/logo.png" alt="" class="profile-img" width="100%" height="100%">
                         </div>
                     </a>
                 </li>
@@ -36,10 +36,45 @@
 
     <main>
 
-    </main>
+        <div class="containet-fluid">
+                <div class="row">
+                    <p class="edit-head">Edit your profile</p>
 
-    <script type="module" src="addProfile.js"></script>
+                </div>
+                <div class="row d-flex mt-4">
+                    <div class="edit-profile col-1 offset-1" > 
+                        <img src="../Assets/logo.png" alt="" class="profile-img" width="100%" height="100%">
+                    </div>
+                    <label class="change-btn col-1">
+                        Change
+                        <input type="file" name="" id="inputfile" class="inputfile">
 
+                    </label>
+                </div>
+                <div class="row  mt-5 username-area">
+                    <div>
+                        <label for="username "class="offset-1 col-4 username-lable">Enter fisrt name</label>
+                        <label for="username "class="offset-1 col-4 username-lable">Enter last name</label>
+                    </div>
+                    <div>
+                        <input type="text" class="col-4 offset-1 mt-2">
+                        <input type="text" class="col-4 offset-1 mt-2">
+                    </div>
+                </div>
+                <div class="row  mt-5 username-area">
+                    <label for="username "class="offset-1 col-4 username-lable">Enter username</label>
+                    <input type="text" class="col-4 offset-1 mt-2">
+                </div>
+
+                <div class="row  mt-5 username-area">
+                            <button class="save-btn col-3 offset-4">Save</button>
+                </div>
+
+                
+        </div>
+        </main>
+
+        <script type="module" src="addProfile.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>

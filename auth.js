@@ -1,9 +1,11 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
 import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword  } from 'https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js'
+import { getDatabase,ref,set,get  } from 'https://www.gstatic.com/firebasejs/10.14.1/firebase-database.js'
 import { firebaseConfig } from "./env.js";
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
+const database = getDatabase(app)
 
 
 let signupBtn = document.getElementById('signup-btn');
@@ -21,12 +23,18 @@ function createUser(){
 
 createUserWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
-    // Signed up 
+
+    console.log(userCredential);
+    
     const user = userCredential.user;
-    window.location.href="Dashboard/index.html";
+    localStorage.setItem('userToken',user.uid);
+    set(ref(database, 'Users/'+user.uid+'/email'),user.email,).then(()=>{
+
+      window.location.href = "Dashboard/index.html";
+    })
 
 
-    // ...
+    // ... 
   })
   .catch((error) => {
     const errorCode = error.code;
@@ -40,13 +48,16 @@ function loginUser(){
     let email = document.getElementById('exampleInputEmail2').value;
     let password = document.getElementById('exampleInputPassword2').value;
 
+      
     
     
 
     signInWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
     // Signed in 
-    const user = userCredential.user;
+        let user = userCredential.user;
+        localStorage.setItem('userToken',user.uid);
+
     window.location.href="Dashboard/index.html";
 
     

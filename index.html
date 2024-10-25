@@ -29,11 +29,20 @@
                     <span><a href="#">Affixbind</a></span>
                 </div>
 
-                <button class="col-4 d-sm-block d-md-none mobile-menu-btn">
+
+                <button class="col-4 d-sm-block d-md-none mobile-menu-btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="fa-solid fa-bars"></i>
                 </button>
+                
+                <ul class=" mobile-menu-nav dropdown-menu d-md-none" aria-labelledby="dropdownMenuButton1" style="background-color: #13161fc4;">
+                    <li><a href="#">Today</a></li>
+                    <li><a href="#">Explore</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><button>Log in</button></li>
+                    <li><button>Sign up</button></li>
+                </ul>
 
-                <ul class="navbar col-6 d-none d-md-flex mt-xl-5 mt-md-1  mt-0">
+                <ul class="nav-bar navbar col-6 d-none d-md-flex mt-xl-5 mt-md-1  mt-0">
                     <li><a href="#">Today</a></li>
                     <li><a href="#">Explore</a></li>
                     <li><a href="#">About</a></li>
