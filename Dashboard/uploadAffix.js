@@ -15,8 +15,6 @@ let affix = {};
 let postID = randomNumber();
 let reader = new FileReader();
 
-
-
 publishBtn.onclick = () =>{
 
     reader.readAsDataURL(uploadImgInput.files[0]);
@@ -31,8 +29,6 @@ reader.onload = (e) => {
          'Descprition':affixDesc.value,
          'tag':['animal','nature'],
          'imgUrl': uploadedImgUrl,
-
-
     }
     
     set(ref(database, 'Post/' + postID ), affix);
@@ -41,6 +37,7 @@ reader.onload = (e) => {
 
    
 }
+
 function randomNumber() {
     
        return Math.ceil( Math.random() * (999999999999999 - 100000000000000) + 100000000000000);
