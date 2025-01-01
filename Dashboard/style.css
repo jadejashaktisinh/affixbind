@@ -1,8 +1,3 @@
-* {
-    margin: 0px;
-    padding: 0px;
-
-}
 
 .container-fluid {
 
@@ -210,4 +205,60 @@ main{
     color: white;
     padding: 10px;
     border-radius: 20px;
+}
+#grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+.affix-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.affix-img:hover {
+  transform: scale(1.05);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.con{
+    width: 98.7vw;
+    margin: 3vw auto;
+    columns: 4;
+    overflow-x:hidden ;
+    max-width: auto;
+}
+.con .box{
+    width: 100;
+    margin: 1vw;
+    margin-right: 3vw;
+    break-inside: avoid;
+}
+.con .box img{
+    max-width: 100%;
+    border-radius: 2vw;
+}
+@media (max-width:1200px){
+    .con{
+        width: calc(98.7vw - 2vw);
+        columns: 3;
+    }
+}
+@media (max-width:768px){
+    .con{
+        columns: 2;
+    }
+}
+@media (max-width:480px){
+    .con{
+        columns: 1;
+    }
 }
