@@ -19,7 +19,12 @@ onValue(ref(database, "Post/"), (snapshot) => {
     const post = posts[postID];
     const postHtml = `
         <div class="con">
-          <div class="box"><img src="${post.imgUrl}" class="box" alt="Post Image" /></div>
+          <div class="box">
+            <a onclick="savePostData(${postID}">
+  <img src="${post.imgUrl}" class="box" alt="${post.title}" />
+</a>
+
+          </div>
         </div>
     `;
     content.innerHTML += postHtml;
@@ -27,3 +32,16 @@ onValue(ref(database, "Post/"), (snapshot) => {
 }, (error) => {
   console.error("Error fetching posts:", error);
 });
+function savePostData(postID) {
+  const post = posts[postID]; // Ensure `posts` is accessible
+  console.log("Post ID:", postID); // Log the post ID
+  console.log("Posts Object:", posts); // Log the posts object
+  
+  if (post) {
+    localStorage.setItem("selectedPost", JSON.stringify(post));
+    console.log("Post data saved to localStorage:", post); // Log the saved data
+  } else {
+    console.error("Post not found for ID:", postID); // Log an error if post is undefined
+  }
+}
+

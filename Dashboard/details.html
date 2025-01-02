@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image Details</title>
+  <style>
+    .image-details {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    h1 {
+      font-size: 24px;
+      margin: 10px 0;
+    }
+    p {
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div class="image-details">
+    <img id="image" alt="Selected Image" />
+    <h1 id="title"></h1>
+    <p id="description"></p>
+  </div>
+
+  <script>
+  const post = JSON.parse(localStorage.getItem("selectedPost"));
+    if (post) {
+    console.log("Post loaded:", post);
+  document.getElementById("image").src = post.imgUrl;
+  document.getElementById("image").alt = post.title;
+  document.getElementById("title").textContent = post.title;
+  document.getElementById("description").textContent = post.description;
+} else {
+  console.error("No data in localStorage");
+  document.body.innerHTML = "<p>No data available.</p>";
+}
+
+  </script>
+</body>
+</html>
