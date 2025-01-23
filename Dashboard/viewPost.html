@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View Post</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .post-container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+    h2 {
+      margin: 10px 0;
+    }
+    p {
+      font-size: 16px;
+      color: #555;
+    }
+    
+/* HTML: <div class="loader"></div> */
+#container-loader{
+    position: relative;
+    height: 80vh;
+}
+.loader {
+    width: 50px;
+    aspect-ratio: 1;
+    display: grid;
+    border: 4px solid #0000;
+    border-radius: 50%;
+    border-color: #ccc #0000;
+    animation: l16 1s infinite linear;
+    margin: auto;
+    position: absolute;
+    top: 45%;
+  left: 49%;
+  
+  }
+  .loader::before,
+  .loader::after {    
+    content: "";
+    grid-area: 1/1;
+    margin: 2px;
+    border: inherit;
+    border-radius: 50%;
+  }
+  .loader::before {
+    border-color: #f03355 #0000;
+    animation: inherit; 
+    animation-duration: .5s;
+    animation-direction: reverse;
+  }
+  .loader::after {
+    margin: 8px;
+  }
+  @keyframes l16 { 
+    100%{transform: rotate(1turn)}
+  }
+  </style>
+</head>
+<body>
+  <div id="container-loader"><div class="loader"></div></div>
+  <div id="content" class="con"></div>
+  <img id="postImage" src="" alt="Post Image" style="max-width: 100%;" />
+ <h1 id="postTitle">Loading...</h1>
+  
+  <p id="postDescription">Loading description...</p>
+  
+  <script type="module" src="viewPost.js">
+    
+  </script>
+</body>
+</html>
